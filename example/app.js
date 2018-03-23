@@ -17,7 +17,7 @@ class App extends React.Component {
       showThumbnails: true,
       showFullscreenButton: true,
       showGalleryFullscreenButton: true,
-      showPlayButton: true,
+      showPlayButton: false,
       showGalleryPlayButton: true,
       showNav: true,
       slideDuration: 450,
@@ -212,120 +212,6 @@ class App extends React.Component {
           additionalClass="app-image-gallery"
         />
 
-        <div className='app-sandbox'>
-
-          <div className='app-sandbox-content'>
-            <h2 className='app-header'>Settings</h2>
-
-            <ul className='app-buttons'>
-              <li>
-                <div className='app-interval-input-group'>
-                  <span className='app-interval-label'>Play Interval</span>
-                  <input
-                    className='app-interval-input'
-                    type='text'
-                    onChange={this._handleInputChange.bind(this, 'slideInterval')}
-                    value={this.state.slideInterval}/>
-                </div>
-              </li>
-
-              <li>
-                <div className='app-interval-input-group'>
-                  <span className='app-interval-label'>Slide Duration</span>
-                  <input
-                    className='app-interval-input'
-                    type='text'
-                    onChange={this._handleInputChange.bind(this, 'slideDuration')}
-                    value={this.state.slideDuration}/>
-                </div>
-              </li>
-
-              <li>
-                <div className='app-interval-input-group'>
-                  <span className='app-interval-label'>Thumbnail Bar Position</span>
-                  <select
-                    className='app-interval-input'
-                    value={this.state.thumbnailPosition}
-                    onChange={this._handleThumbnailPositionChange.bind(this)}
-                  >
-                    <option value='bottom'>Bottom</option>
-                    <option value='top'>Top</option>
-                    <option value='left'>Left</option>
-                    <option value='right'>Right</option>
-                  </select>
-                </div>
-              </li>
-            </ul>
-
-            <ul className='app-checkboxes'>
-              <li>
-                <input
-                  id='infinite'
-                  type='checkbox'
-                  onChange={this._handleCheckboxChange.bind(this, 'infinite')}
-                  checked={this.state.infinite}/>
-                  <label htmlFor='infinite'>allow infinite sliding</label>
-              </li>
-              <li>
-                <input
-                  id='show_fullscreen'
-                  type='checkbox'
-                  onChange={this._handleCheckboxChange.bind(this, 'showFullscreenButton')}
-                  checked={this.state.showFullscreenButton}/>
-                  <label htmlFor='show_fullscreen'>show fullscreen button</label>
-              </li>
-              <li>
-                <input
-                  id='show_playbutton'
-                  type='checkbox'
-                  onChange={this._handleCheckboxChange.bind(this, 'showPlayButton')}
-                  checked={this.state.showPlayButton}/>
-                  <label htmlFor='show_playbutton'>show play button</label>
-              </li>
-              <li>
-                <input
-                  id='show_bullets'
-                  type='checkbox'
-                  onChange={this._handleCheckboxChange.bind(this, 'showBullets')}
-                  checked={this.state.showBullets}/>
-                  <label htmlFor='show_bullets'>show bullets</label>
-              </li>
-              <li>
-                <input
-                  id='show_thumbnails'
-                  type='checkbox'
-                  onChange={this._handleCheckboxChange.bind(this, 'showThumbnails')}
-                  checked={this.state.showThumbnails}/>
-                  <label htmlFor='show_thumbnails'>show thumbnails</label>
-              </li>
-              <li>
-                <input
-                  id='show_navigation'
-                  type='checkbox'
-                  onChange={this._handleCheckboxChange.bind(this, 'showNav')}
-                  checked={this.state.showNav}/>
-                  <label htmlFor='show_navigation'>show navigation</label>
-              </li>
-              <li>
-                <input
-                  id='show_index'
-                  type='checkbox'
-                  onChange={this._handleCheckboxChange.bind(this, 'showIndex')}
-                  checked={this.state.showIndex}/>
-                  <label htmlFor='show_index'>show index</label>
-              </li>
-              <li>
-                <input
-                  id='slide_on_thumbnail_hover'
-                  type='checkbox'
-                  onChange={this._handleCheckboxChange.bind(this, 'slideOnThumbnailHover')}
-                  checked={this.state.slideOnThumbnailHover}/>
-                  <label htmlFor='slide_on_thumbnail_hover'>slide on thumbnail hover (desktop)</label>
-              </li>
-            </ul>
-          </div>
-
-        </div>
       </section>
     );
   }
